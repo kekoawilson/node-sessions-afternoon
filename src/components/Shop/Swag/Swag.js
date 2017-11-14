@@ -9,13 +9,16 @@ class Swag extends Component {
     const { id, title, price, addToCart } = this.props;
     return (
       <div id="Swag__parent">
-        <span id="Swag__name"> { title } </span>
+        <span id="Swag__name" > { title } </span>
         <div id="Swag__detailsContainer">
           <div id="Swag__priceContainer">
             <span > ${ price.toFixed(2) } </span>
           </div>
-          <div id="Swag__atcContainer" onClick={ () => addToCart( id ) }>
-            <span> Add to Cart </span>
+          <div id="Swag__atcContainer" onClick={ () => {
+           alert('Item added to cart') 
+           addToCart( id )
+             }}>
+            <span > Add to Cart </span>
           </div>
         </div>
       </div>
